@@ -1,0 +1,8 @@
+.nav{
+    display: flex;
+    flex-direction: row;
+    margin: 6px;
+}
+div h1{
+    margin-left: 10px;
+}
