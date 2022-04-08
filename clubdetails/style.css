@@ -13,7 +13,6 @@
     padding-top:20px ;
     text-decoration: none;
     text-align: center;
-    
 }
 #logo{
     width:3em;
@@ -35,9 +34,6 @@ hr{
     height: 150px;
     width: 80%;
     border-color: #193d58;
-    
-     
-
 }
 .info p{
     color:white;
@@ -66,5 +62,12 @@ color: #193d58;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    background-color:#6aa6d4;
+
     
 }
+ .reg
+ {
+     
+    
+ }
