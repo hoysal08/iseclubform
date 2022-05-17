@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr1 = [];
+        
+        var s1 = prompt("enter the size of 1st array");
+         
+        for(var a=0; a<s1; a++) 
+        {
+             arr1[a] = parseInt(prompt('Enter array Element ' + (a+1)));
+        }
+
+
+        var arr2 = [];
+        
+        var s2 = prompt("enter the size of 2nd array");
+         
+        for(var a=0; a<s2; a++) 
+        {
+             arr2[a] = prompt('Enter array Element ' + (a+1));
+        }
+ 
+       var n=s1>s2?s1:s2
+       var flag=true;
+        for(var i=0;i<n;i++)
+        {
+            if(arr1[i]==arr2[i])
+            {
+                continue
+            }
+            else
+            {
+                flag=false;
+                break;
+            }
+        }
+        document.write(flag)
+        
+    </script>
+</body>
+</html>
