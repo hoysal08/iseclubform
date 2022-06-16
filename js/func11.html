@@ -7,7 +7,31 @@
     <title>Document</title>
 </head>
 <body>
-    <sc
+    <script>
+        let n=parseInt(prompt("enter the number of strings"));
+        let arr=[]
+         for(let i=0;i<n;i++)
+          {
+           arr[i]=prompt(`enter the string ${i+1}`)
+            }
+            document.write("the entred strings are: <br>")
+            document.write(arr)
+            let val=parseInt(prompt("enter the length of strings"));
+            let resarr=[]
+            let j=0;
+
+            for(let i=0;i<n;i++)
+           { 
+              let len=arr[i].length
+              console.log(len)
+              if(len==val)
+              {
+                 resarr[j++]=arr[i]
+              }
+            }
+            document.write("<br>the result is: <br>")
+            document.write(resarr)
+    </script>
     
 </body>
 </html>

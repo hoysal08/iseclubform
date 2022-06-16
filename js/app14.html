@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let str=prompt("enter the input string")
+        
+function findUnique(str){
+// The variable that contains the unique values
+let uniq = "";
+
+for(let i = 0; i < str.length; i++){
+	// Checking if the uniq contains the character
+	if(uniq.includes(str[i]) === false){
+	
+	uniq += str[i]
+	}
+}
+return uniq;
+}
+document.write("the string with unique elements are : <br>")
+ document.write(findUnique(str))
+
+
+
+    </script>
+    
+</body>
+</html>
