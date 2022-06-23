@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="clickme">click here</button>
+    <script>
+          let element=document.getElementById("clickme")
+          element.addEventListener("click",btnclicked)
+          function btnclicked(){
+           let ip=" "
+            ip=prompt("enter the input string");
+             let op= [...ip].sort().join("");
+             document.write(op)
+          }
+    </script>
+    
+</body>
+</html>

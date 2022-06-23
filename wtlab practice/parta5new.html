@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let n=parseInt(prompt("enter the size of the array"))
+        // let arr=[]
+        // for(let i=0;i<n;i++)
+        // {
+        //       arr[i]=prompt("enter the element at index "+i)
+        // }
+        // console.log(arr)
+        // let ins_in=parseInt(prompt("enter the index you want to inster into"))
+        // let ins_ele
+        // if(ins_in<n)
+        // {
+        //      ins_ele=prompt("enter the element you want to insert")
+        // }
+        // arr=[...arr.slice(0,ins_in),ins_ele , ...arr.slice(ins_in)]
+
+        // console.log(arr)
+
+        let n=parseInt(prompt("enter the size of the array"))
+        let arr=[]
+        for(let i=0;i<n;i++)
+        {
+              arr[i]=prompt("enter the element at index "+i)
+        }
+        console.log(arr)
+        let ins_in=parseInt(prompt("enter the index you want to delete at"))
+
+        arr=[...arr.slice(0,ins_in), ...arr.slice(ins_in+1)]
+
+        console.log(arr)
+    </script>
+    
+</body>
+</html>

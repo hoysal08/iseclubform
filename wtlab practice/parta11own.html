@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let encode=(str,key)=>{
+            let lowercase=str.toLowerCase();
+            let n=str.length
+            let newstr=""
+            let alphabets="abcdefghijklmnopqrstuvxyz".split("")
+            for(i=0;i<n;i++)
+            {
+                let currentchar=lowercase[i];
+                if(currentchar===" ")
+                {
+                     newstr+=" "
+                }
+                let newindex=key+alphabets.indexOf(currentchar);
+                if(newindex>25) newindex=newindex-26
+                if(newindex<0) newindex=newindex+26
+                if(str[i]===currentchar.toUpperCase())
+                {
+                    newstr=newstr+alphabets[newindex].toUpperCase();
+                }
+                else
+                {
+                    newstr=newstr+alphabets[newindex]
+                }
+            }
+            document.write(newstr)
+
+        }
+        let ip=prompt("enter the string to be encoded")
+        let key=parseInt(prompt("enter the key"))
+        encode(ip,key)
+
+    </script>
+</body>
+</html>

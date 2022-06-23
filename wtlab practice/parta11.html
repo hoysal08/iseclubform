@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let encode=(str,num)=>{
+        let lowercasestr=str.toLowerCase();
+        let newstr=''
+        let alphabets="abcdefghijklmnopqrstuvwxyz".split('')
+        for(let i=0;i<str.length;i++)
+        { 
+            let lowercasechar=lowercasestr[i]
+            if(lowercasechar===" ")
+            {
+                newstr+=lowercasechar;
+                continue;
+            }
+            let newindex=num+alphabets.indexOf(lowercasechar);
+            if(newindex>25) newindex-=26;
+            if(newindex<0)newindex+=26;
+            if(str[i]===str[i].toUpperCase())
+            {
+                newstr=newstr+alphabets[newindex].toUpperCase();
+            }
+            else
+            {
+                newstr=newstr+alphabets[newindex]
+            }
+            console.log(`${str[i]} => ${newstr[i]}`)
+        }
+        return newstr
+
+        }
+
+        document.write(encode("sooraj",3))
+    </script>
+    
+</body>
+</html>

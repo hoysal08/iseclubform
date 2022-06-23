@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      let kg=prompt("enter your weight in KG")
+      let lbs=kg*2.2
+      let checkweight=(lb)=>{
+        if(lb>150)
+        {
+            return "obese"
+        }
+        else if(lb>=100 && lb<=150)
+        {
+            return "you are ok"
+        }
+        else if(lbs<100)
+        {
+            return "underweight"
+        }
+      }
+
+     document.write( checkweight(lbs))
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    // let str=prompt("enter the first string");
+    // let str1=prompt("enter the second string");
+    // let ind=parseInt(prompt("enter the index"))
+   
+   let capfirst=(str)=>{
+    let arr=str.split(" ")
+    for(let i=0;i<arr.length;i++)
+    {
+       arr[i]=arr[i].charAt(0).toUpperCase()+arr[i].slice(1)
+    }
+    str=arr.join(" ")
+    console.log(str);
+   }
+  
+   let insertat=(str,str1,index)=>{
+     let newstr= str.slice(0,index)+str1+str.slice(index)
+     console.log(newstr)
+   }
+   insertat("hello sunshine how are you","good morning ",15)
+
+
+ 
+//   document.write("string1 entered: "+str+"<br>");
+//   document.write("string2 entered: "+str1+"<br>");
+//   document.write("The capital of all the words in the string is:"+ capfirst(str)+"<br>")
+//   document.write(`after inserting string 2 at index ${ind} in string 1::`+ insertat(str,str1,ind)+"<br>");
+//   document.write("checking if the input for string 1 was actually a string:"+ checkforstr(str)+"<br>")
+//   document.write("The array format of string 1:"+ converttoarr(str));
+
+    </script>
+    
+</body>
+</html>

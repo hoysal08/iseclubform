@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let val=new Promise((resolve,reject)=>{
+              resolve("resolved")
+        })
+        val.then((m)=>{
+            console.log("then called : "+m)
+        })
+        val.catch((m)=>{
+            console.log("catch called: "+m)
+        })
+        val.then(()=>{
+            console.log("done")
+            alert("hello")
+        })
+    </script>
+    
+</body>
+</html>

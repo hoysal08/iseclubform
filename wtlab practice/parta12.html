@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let str=prompt("enter the first string");
+        let str1=prompt("enter the second string");
+        let ind=parseInt(prompt("enter the index"))
+        let capfirst=(str)=>{
+            let ip=str.split(" ");
+            for(let i=0;i<ip.length;i++)
+             {
+                ip[i]=ip[i].charAt(0).toUpperCase()+ip[i].slice(1)
+            }
+           return( ip.join(" "))
+        
+        }
+    let insertat=(str,strr,index)=>{
+          let op= str.slice(0,index)+strr+str.slice(index)
+          return (op)
+    }
+
+    let checkforstr=(str)=>{
+        if(typeof(str)==="string")
+        {
+            return (true)
+        }
+        else
+        {
+            return (false)
+        }
+    }
+
+    let converttoarr=(str)=>{
+        let op=str.split(" ")
+        return op
+    }
+  document.write("string1 entered: "+str+"<br>");
+  document.write("string2 entered: "+str1+"<br>");
+  document.write("The capital of all the words in the string is:"+ capfirst(str)+"<br>")
+  document.write(`after inserting string 2 at index ${ind} in string 1::`+ insertat(str,str1,ind)+"<br>");
+  document.write("checking if the input for string 1 was actually a string:"+ checkforstr(str)+"<br>")
+  document.write("The array format of string 1:"+ converttoarr(str));
+
+</script>
+    
+</body>
+</html>

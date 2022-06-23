@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let flag=true
+        let age=21 
+        function onfulfilled(){
+            console.log("age greater than 18");
+        }
+        function onrejected(){
+            console.log("age lesser than 18");
+        }
+        let val=new Promise((resolve,reject)=>{
+                if(flag)
+                  resolve("flag is true")
+                else
+                 reject("flag is false")
+        })
+        val.then((m,onfulfilled,onrejected)=>{
+            console.log(m);
+            if(age>18)
+            {
+                onfulfilled()
+            }
+            else
+            {
+                 onrejected()
+            }  
+        })
+       
+    </script>
+    
+</body>
+</html>

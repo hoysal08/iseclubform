@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+    let n=parseInt(prompt("enter the size of array"))
+    let arr=[]
+    for(let i=0;i<n;i++)
+    {
+        arr[i]=parseInt(prompt("enter the element for index:"+i))
+    }
+    document.write("the array  inserted is :"+arr);
+    let ins=parseInt(prompt("enter the index where you want to insert"));
+    let ins_ele=parseInt(prompt("enter the element to be inserted"))
+    for(let i=n;i>=0;i--)
+    {   
+        if(i<ins)
+        {
+            break;
+        }
+        if(i===ins)
+        {   
+            arr[i+1]=arr[i]
+            arr[i]=ins_ele
+        }
+        else{
+        arr[i+1]=arr[i];
+    }}
+    document.write(" <br> the array after insertion is :"+arr);
+     setTimeout(del_element,3000)
+    function del_element(){
+        let del=parseInt(prompt("enter the index where you want to delete"));
+    for(let i=0;i<n-1;i++)
+    {   
+     
+        if(i<del)
+        {
+            continue
+        }
+        if(i>=del)
+        {
+          arr[i]=arr[i+1]
+        }
+        
+    }
+
+    }
+    
+    document.write(" <br> the array after deletion  is :"+arr);
+
+
+</script>
+</body>
+</html>
